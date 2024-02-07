@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./home.module.css";
 import { useState, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export default function Home() {
@@ -10,23 +12,37 @@ export default function Home() {
 
   generatedImg && console.log(prompt, generatedImg);
 
+  // toast options
+  const toastOptions = {
+    position: "bottom-left",
+    autoClose: 4000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "light",
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
-    showImgRef.current.style.display = "flex";
-    setGeneratedImg("");
+
     console.log("form submitted");
 
-    axios
-      .post("https://59df-103-17-110-127.ngrok-free.app/text", {
-        data: prompt,
-      })
-      .then(function (response) {
-        console.log(response);
-        setGeneratedImg(`data:image/webp;base64,${response.data.image}`);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if (prompt === "") {
+      toast.error("Please enter a prompt to generate image", toastOptions);
+    } else {
+      showImgRef.current.style.display = "flex";
+      setGeneratedImg("");
+      axios
+        .post("https://59df-103-17-110-127.ngrok-free.app/text", {
+          data: prompt,
+        })
+        .then(function (response) {
+          console.log(response);
+          setGeneratedImg(`data:image/webp;base64,${response.data.image}`);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
   return (
     <div className={styles.Home}>
@@ -62,6 +78,7 @@ export default function Home() {
           )}
         </div>
       </main>
+      <ToastContainer />
     </div>
   );
 }
