@@ -1,10 +1,17 @@
 import React from "react";
-import Home from "./pages/home/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home/HomePage";
+import CaptureImagePage from "./pages/captureImagePage/CaptureImagePage";
+import GeneratedImagePage from "./pages/generatedImagePage/generatedImagePage";
 
 export default function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/capture-image" element={<CaptureImagePage />} />
+        <Route path="/generated-image" element={<GeneratedImagePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
