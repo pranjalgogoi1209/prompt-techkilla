@@ -61,12 +61,11 @@
     .resultContainer {
       border: 4px solid #212121;
       width: 30vw;
-      height: 34.4vw;
+      height: 30vw;
       border-radius: 1.4vw;
       background-color: #ffeab2;
       .generatedImgContainer {
         /* border: 1px solid black; */
-        /* width: 30vw; */
         display: none;
         .image {
           /* width: 20vw; */

@@ -6,8 +6,11 @@ import axios from "axios";
 // import { IoIosCloseCircle } from "react-icons/io";
 import styles from "./generatedImagePage.module.css";
 import Header from "../../components/header/Header";
+import exportAsImage from "../../utils/exportAsImage";
+import EmailFeature from "../../components/generatedImage/email/EmailFeature";
 
 export default function GeneratedImagePage({ capturedImage }) {
+  const exportRef = useRef();
   const showImgRef = useRef();
   const [prompt, setPrompt] = useState("");
   const [generatedImg, setGeneratedImg] = useState();
@@ -29,9 +32,7 @@ export default function GeneratedImagePage({ capturedImage }) {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     console.log("form submitted");
-
     if (prompt === "") {
       toast.error("Please enter a prompt to generate image", toastOptions);
     } else {
@@ -72,20 +73,26 @@ export default function GeneratedImagePage({ capturedImage }) {
             <button>Download</button>
 
             {/* email feature */}
-            <button>Email</button>
+            <EmailFeature generatedImg={generatedImg} />
 
             {/* print feature */}
             <button>Print</button>
 
             {/* qr feature */}
-            <button>QR</button>
+            <button
+              onClick={() =>
+                exportAsImage(exportRef.current, "generated-image")
+              }
+            >
+              QR
+            </button>
           </div>
         </div>
         <div className={styles.resultContainer}>
           <div className={styles.generatedImgContainer} ref={showImgRef}>
             {generatedImg ? (
               <div className={styles.image}>
-                <img src={generatedImg} alt="generated image" />
+                <img src={generatedImg} alt="generated image" ref={exportRef} />
               </div>
             ) : (
               <div className={styles.loading}>

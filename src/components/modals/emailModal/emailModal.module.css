@@ -1,0 +1,88 @@
+.EmailModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: white; */
+  position: absolute;
+  /* top: 0; */
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  .container {
+    /* border: 2px solid black; */
+    background-color: #f1f1f1;
+    margin: 5vw;
+    padding: 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+  }
+  header {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    position: relative;
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 6vw;
+      color: #c72041;
+    }
+    .logo {
+      margin: 0 auto;
+      width: 20vw;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h1 {
+      /* border: 1px solid black; */
+      font-size: 4vw;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+  main {
+    /* border: 1px solid black; */
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 5vw;
+      align-items: center;
+      input {
+        /* background-color: #c72041; */
+        width: 97%;
+        padding: 2vw;
+        font-size: 2vw;
+        font-weight: bold;
+      }
+      button {
+        /* width: 27%; */
+        text-align: center;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 1vw 4vw;
+        font-size: 3vw;
+        font-weight: 600;
+        border-radius: 1vw;
+        cursor: pointer;
+        box-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.5);
+        transform: translateY(-0.4vw);
+        transition: all ease 0.5s;
+        background-color: #c72041;
+        color: #f1f1f1;
+        &:hover {
+          box-shadow: none;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
