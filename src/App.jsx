@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homePage/HomePage";
 import CaptureImagePage from "./pages/captureImagePage/CaptureImagePage";
-import GeneratedImagePage from "./pages/generatedImagePage/generatedImagePage";
+import GeneratedImagePage from "./pages/generatedImagePage/GeneratedImagePage";
 
 export default function App() {
   const [capturedImage, setCapturedImg] = useState();

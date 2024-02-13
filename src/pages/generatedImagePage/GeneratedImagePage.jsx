@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { IoIosCloseCircle } from "react-icons/io";
+// import { IoIosCloseCircle } from "react-icons/io";
 import styles from "./generatedImagePage.module.css";
 import Header from "../../components/header/Header";
 
