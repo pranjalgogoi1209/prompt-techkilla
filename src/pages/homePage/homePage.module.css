@@ -1,0 +1,13 @@
+.HomePage {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+
+  main {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+}

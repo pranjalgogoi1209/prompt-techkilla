@@ -1,0 +1,43 @@
+.sliderContainer {
+  border: 2px solid black;
+  /* height: 50vh; */
+  .swiper {
+    width: 100%;
+    /* padding: 2vw; */
+    /* height: 60vh; */
+    border: 1px solid black;
+  }
+
+  .swiperSlide {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    .imageContainer {
+      width: 100%;
+      height: 15vw;
+      background-position: center;
+      background-size: cover;
+      img {
+        border: 1px solid black;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 2vw;
+      }
+    }
+    .slideContent {
+      border: 1px solid black;
+      padding: 0.2vw;
+      h2 {
+        font-size: 1.7vw;
+      }
+      p {
+        font-size: 1.3vw;
+        text-align: justify;
+      }
+    }
+  }
+}
