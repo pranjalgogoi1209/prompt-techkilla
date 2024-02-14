@@ -38,6 +38,7 @@ export default function GeneratedImagePage({ capturedImage }) {
   const handleSubmit = e => {
     e.preventDefault();
     console.log("form submitted");
+    setPrintImage("");
     if (prompt === "") {
       toast.error("Please enter a prompt to generate image", toastOptions);
     } else {
