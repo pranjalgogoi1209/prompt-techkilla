@@ -13,7 +13,12 @@ export default function EmailFeature({ generatedImg }) {
 
   return (
     <div>
-      <button onClick={handleEmail}>Email</button>
+      <button
+        onClick={handleEmail}
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        Email
+      </button>
       {isEmailOpen && (
         <EmailModal
           setIsEmailOpen={setIsEmailOpen}

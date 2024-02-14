@@ -9,6 +9,8 @@ import EmailFeature from "../../components/generatedImage/emailFeature/EmailFeat
 import DownloadFeature from "../../components/generatedImage/downloadFeature/DownloadFeature";
 import PrintFeature from "../../components/generatedImage/printFeature/PrintFeature";
 import QrFeature from "../../components/generatedImage/qrFeature/QrFeature";
+import { MdModeEditOutline } from "react-icons/md";
+import { FaWandMagicSparkles } from "react-icons/fa6";
 
 export default function GeneratedImagePage({ capturedImage }) {
   const printRef = useRef();
@@ -62,16 +64,52 @@ export default function GeneratedImagePage({ capturedImage }) {
       <Header title={"Generate an Image From Text Prompt"} />
       <main className={styles.main}>
         <div className={styles.promptContainer}>
+          {/* form */}
           <form className={styles.prompt} onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="prompt"
-              placeholder="Enter Prompt"
-              value={prompt}
-              onChange={e => setPrompt(e.target.value)}
-            />
-            <button type="submit">Generate</button>
+            <div className={styles.inputBox}>
+              <input
+                type="text"
+                name="prompt"
+                placeholder="Describe Your Vision"
+                value={prompt}
+                onChange={e => setPrompt(e.target.value)}
+              />
+              <MdModeEditOutline />
+            </div>
+            <button type="submit">
+              <FaWandMagicSparkles />
+              Generate
+            </button>
           </form>
+
+          {/* prompt example */}
+          <div className={styles.promptExample}>
+            <h2>Prompt Examples:</h2>
+            <ol>
+              <li onClick={e => setPrompt(e.target.innerText)}>
+                Generate a realistic, diverse image of a young adult male with a
+                casual, modern style
+              </li>
+              <li onClick={e => setPrompt(e.target.innerText)}>
+                Create an image of a confident and professional adult female
+                with a casual appearance
+              </li>
+              <li onClick={e => setPrompt(e.target.innerText)}>
+                Generate an artistic and unique portrayal of a teenage male with
+                a sporty and energetic vibe
+              </li>
+              <li onClick={e => setPrompt(e.target.innerText)}>
+                Craft a visually appealing image of a mature female with a
+                relaxed and sophisticated demeanor
+              </li>
+              <li onClick={e => setPrompt(e.target.innerText)}>
+                Generate an image of a young couple, showcasing a natural and
+                joyful interaction between a male and female in a casual setting
+              </li>
+            </ol>
+          </div>
+
+          {/* share features */}
           <div className={styles.btns}>
             {/* download feature */}
             <DownloadFeature exportRef={exportRef} />

@@ -47,5 +47,12 @@ export default function PrintFeature({
     }
   }, [generatedImg]);
 
-  return <button onClick={handlePrint}>Print</button>;
+  return (
+    <button
+      onClick={handlePrint}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      Print
+    </button>
+  );
 }

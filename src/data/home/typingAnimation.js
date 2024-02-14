@@ -1,5 +1,5 @@
 export const typingData = [
-  "A boy working behind a big screen, wearing glasses, short hair cut",
+  "Describe your vision, generate the art, and share it instantly",
   500,
   "A girl running on the road ",
   500,

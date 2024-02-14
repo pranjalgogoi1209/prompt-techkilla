@@ -63,10 +63,13 @@ export default function CaptureImagePage({ setCapturedImg }) {
           {/*  <img src={frame} alt="frame" className={styles.frame} /> */}
         </div>
         <div className={styles.capture}>
-          <button onClick={e => handleCapture(e)} className="captureRetake">
+          <button
+            onClick={e => handleCapture(e)}
+            className={styles.captureRetake}
+          >
             Capture
           </button>
-          <button onClick={handleSubmit} className="submit">
+          <button onClick={handleSubmit} className={styles.submit}>
             Submit
           </button>
         </div>

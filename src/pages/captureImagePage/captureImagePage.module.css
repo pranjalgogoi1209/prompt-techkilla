@@ -1,10 +1,10 @@
 .CaptureImagePage {
-  border: 1px solid red;
+  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   gap: 2vw;
   .captureImage {
-    border: 1px solid black;
+    /* border: 1px solid white; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -15,23 +15,27 @@
       position: relative;
       width: 35vw;
       height: 26.8vw;
-      background-color: #212121;
-      border: 0.7vw solid #212121;
-      border-bottom: 0.3vw solid #212121;
-      border-radius: 2vw;
+      background-color: #fff;
+      border: 0.3vw solid #fff;
+      /* border-bottom: 0vw solid #fff; */
+      border-radius: 1vw;
       .webcamParent {
         position: relative;
         width: 100%;
+        height: 100%;
         overflow: hidden;
         #webcam {
-          border-radius: 2vw;
+          border-radius: 1vw;
           margin: 0 auto;
           width: 100.3%;
-          /* object-fit: cover; */
+          height: 100%;
+          object-fit: cover;
         }
         .capturedImage {
           border-radius: 2vw;
           width: 100.3%;
+          height: 100%;
+          object-fit: cover;
           position: absolute;
           top: 0;
           left: 0;
@@ -48,15 +52,15 @@
     }
 
     .capture {
-      /* border: 1px solid black; */
+      /* border: 1px solid white; */
       display: flex;
       gap: 2vw;
       button {
-        /* border: 0.13vw solid black; */
+        color: #000;
+        border: 0.13vw solid #fff;
         text-align: center;
         width: 16vw;
         border: none;
-        background-color: transparent;
         outline: none;
         padding: 0.2vw 2vw;
         font-weight: 600;
@@ -75,7 +79,8 @@
         background-color: #fcb017;
       }
       .submit {
-        border: 0.1vw solid black;
+        color: #fff;
+        border: 0.1vw solid #fff;
         background-color: transparent;
       }
     }

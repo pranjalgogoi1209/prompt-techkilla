@@ -27,7 +27,12 @@ export default function QrFeature({ generatedImg }) {
   };
   return (
     <div>
-      <button onClick={handleSubmitQr}>QR</button>
+      <button
+        onClick={handleSubmitQr}
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        QR
+      </button>
 
       {showQrPopup && (
         <div className={styles.popupQr}>
