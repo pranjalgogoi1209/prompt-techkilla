@@ -1,15 +1,16 @@
 .TypingAnimation {
-  border: 1px solid #ff0000;
+  /* border: 1px solid #fff; */
   width: 100%;
   display: flex;
   justify-content: center;
   .typingContainer {
-    border: 2px solid black;
+    border: 2px solid #ffbe2e;
     width: 80%;
     display: flex;
     justify-content: space-between;
-    padding: 1vw;
-    border-radius: 2vw;
+    padding: 0.5vw 2vw;
+    border-radius: 1vw;
+    background-color: #fff;
     .typing {
       /* border: 1px solid black; */
       width: 70%;
@@ -18,16 +19,33 @@
       align-items: center;
       flex: 1;
       span {
-        font-size: 2vw;
+        font-size: 1.6vw;
         font-weight: bold;
       }
     }
     .btnContainer {
-      border: 1px solid black;
+      border: 1px solid #fff;
+      a {
+        text-decoration: none;
+      }
       button {
-        padding: 1vw 2vw;
+        width: 9.5vw;
+        padding: 0.2vw 0.8vw;
         cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: #ffbe2e;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5vw;
+        border-radius: 0.6vw;
+        border: 1px solid black;
+        font-weight: bold;
         span {
+          /* border: 1px solid black; */
+          display: inline-block;
+          width: 1.5vw;
           img {
             width: 100%;
             height: 100%;

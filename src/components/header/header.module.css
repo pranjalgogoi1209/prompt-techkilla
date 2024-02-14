@@ -1,22 +1,23 @@
 .Header {
-  border: 1px solid black;
+  /* border: 1px solid white; */
   display: flex;
   justify-content: space-between;
   .title {
-    border: 1px solid black;
+    /* border: 1px solid white; */
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 8vw;
     h1 {
-      border: 1px solid black;
+      /* border: 1px solid white; */
       font-size: 3vw;
       text-align: center;
+      color: #fff;
     }
   }
   .logoContainer {
-    border: 1px solid black;
+    /* border: 1px solid white; */
     width: 8vw;
     img {
       width: 100%;

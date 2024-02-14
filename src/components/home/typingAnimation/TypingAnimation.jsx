@@ -3,6 +3,7 @@ import styles from "./typingAnimation.module.css";
 import { TypeAnimation } from "react-type-animation";
 import { typingData } from "./../../../data/home/typingAnimation";
 import { Link } from "react-router-dom";
+import star from "./../../../assets/homePage/typingText/star.png";
 
 export default function TypingAnimation() {
   return (
@@ -20,9 +21,9 @@ export default function TypingAnimation() {
           <Link to={"/capture-image"}>
             <button>
               <span>
-                <img src="#" alt="star" />
+                <img src={star} alt="star" />
               </span>
-              Start
+              START
             </button>
           </Link>
         </div>

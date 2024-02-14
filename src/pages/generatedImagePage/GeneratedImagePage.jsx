@@ -3,17 +3,20 @@ import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-// import { IoIosCloseCircle } from "react-icons/io";
 import styles from "./generatedImagePage.module.css";
 import Header from "../../components/header/Header";
-import exportAsImage from "../../utils/exportAsImage";
-import EmailFeature from "../../components/generatedImage/email/EmailFeature";
+import EmailFeature from "../../components/generatedImage/emailFeature/EmailFeature";
+import DownloadFeature from "../../components/generatedImage/downloadFeature/DownloadFeature";
+import PrintFeature from "../../components/generatedImage/printFeature/PrintFeature";
+import QrFeature from "../../components/generatedImage/qrFeature/QrFeature";
 
 export default function GeneratedImagePage({ capturedImage }) {
+  const printRef = useRef();
   const exportRef = useRef();
   const showImgRef = useRef();
   const [prompt, setPrompt] = useState("");
   const [generatedImg, setGeneratedImg] = useState();
+  const [printImage, setPrintImage] = useState();
 
   generatedImg && console.log("generated Image =>", generatedImg);
 
@@ -53,6 +56,7 @@ export default function GeneratedImagePage({ capturedImage }) {
         });
     }
   };
+
   return (
     <div className={styles.GeneratedImagePage}>
       <Header title={"Generate an Image From Text Prompt"} />
@@ -70,29 +74,32 @@ export default function GeneratedImagePage({ capturedImage }) {
           </form>
           <div className={styles.btns}>
             {/* download feature */}
-            <button>Download</button>
+            <DownloadFeature exportRef={exportRef} />
 
             {/* email feature */}
             <EmailFeature generatedImg={generatedImg} />
 
             {/* print feature */}
-            <button>Print</button>
+            <PrintFeature
+              setPrintImage={setPrintImage}
+              printRef={printRef}
+              generatedImg={generatedImg}
+            />
 
             {/* qr feature */}
-            <button
-              onClick={() =>
-                exportAsImage(exportRef.current, "generated-image")
-              }
-            >
-              QR
-            </button>
+            <QrFeature generatedImg={generatedImg} />
           </div>
         </div>
         <div className={styles.resultContainer}>
           <div className={styles.generatedImgContainer} ref={showImgRef}>
-            {generatedImg ? (
-              <div className={styles.image}>
-                <img src={generatedImg} alt="generated image" ref={exportRef} />
+            {printImage ? (
+              <div className={styles.image} ref={exportRef}>
+                <img
+                  src={printImage}
+                  alt="generated image"
+                  ref={printRef}
+                  id="printableArea"
+                />
               </div>
             ) : (
               <div className={styles.loading}>

@@ -1,41 +1,46 @@
 .sliderContainer {
-  border: 2px solid black;
+  /* border: 2px solid white; */
   /* height: 50vh; */
   .swiper {
     width: 100%;
     /* padding: 2vw; */
     /* height: 60vh; */
-    border: 1px solid black;
+    /* border: 1px solid white; */
   }
 
   .swiperSlide {
-    border: 1px solid black;
+    border: 2px solid #ffbe2e;
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    /* background-color: #1e1f23; */
     background-color: #fff;
-    border-radius: 2vw;
+    border-radius: 1vw;
+    padding: 0.3vw;
     .imageContainer {
       width: 100%;
-      height: 15vw;
+      height: 17vw;
       background-position: center;
       background-size: cover;
       img {
-        border: 1px solid black;
+        /* border: 3px solid #fff; */
         display: block;
         width: 100%;
         height: 100%;
-        border-radius: 2vw;
+        border-radius: 0.7vw;
       }
     }
     .slideContent {
-      border: 1px solid black;
+      /* border: 1px solid black; */
       padding: 0.2vw;
+      /* color: #fff; */
+
       h2 {
         font-size: 1.7vw;
       }
       p {
-        font-size: 1.3vw;
+        margin-top: 0.3vw;
+        font-size: 1.1vw;
         text-align: justify;
       }
     }
