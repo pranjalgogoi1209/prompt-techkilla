@@ -15,8 +15,8 @@ export default function Slider() {
         modules={[EffectCoverflow, Pagination, Autoplay]}
         loop={true}
         autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
+          delay: 2000,
+          disableOnInteraction: false,
         }}
         effect={"coverflow"}
         grabCursor={true}
