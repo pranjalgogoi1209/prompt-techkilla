@@ -4,7 +4,8 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./emailModal.module.css";
-import Header from "../../header/Header";
+import logo from "./../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 export default function EmailModal({ setIsEmailOpen, generatedImg }) {
   const [userEmail, setUserEmail] = useState();
@@ -61,10 +62,21 @@ export default function EmailModal({ setIsEmailOpen, generatedImg }) {
   };
 
   return (
-    <div className={styles.EmailModal}>
-      <div className="container">
+    <div
+      className={styles.EmailModal}
+      onClick={() => {
+        setIsEmailOpen(false);
+      }}
+    >
+      <div
+        className={styles.container}
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
+        {/* close btn */}
         <div
-          className="close"
+          className={styles.close}
           onClick={() => {
             setIsEmailOpen(false);
           }}
@@ -73,16 +85,24 @@ export default function EmailModal({ setIsEmailOpen, generatedImg }) {
         </div>
 
         {/* header */}
-        <Header title={"Share Generated Image"} />
+        <header>
+          <h2>Share Generated Image</h2>
+          <div className={styles.logoContainer}>
+            <img src={logo} alt="logo" />
+          </div>
+        </header>
 
+        {/* main */}
         <main>
-          <div className="form">
+          <div className={styles.form}>
             <input
               type="mail"
               placeholder="Enter an email..."
               onChange={e => setUserEmail(e.target.value)}
             />
-            <button onClick={handleSend}>Send</button>
+            <div onClick={handleSend} className={styles.btn}>
+              Send
+            </div>
           </div>
         </main>
       </div>

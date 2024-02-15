@@ -29,4 +29,8 @@ export const sliderData = [
     img: img5,
     prompt: "A man working behind a big screen, wearing glasses, ",
   },
+  {
+    img: img5,
+    prompt: "A man working behind a big screen, wearing glasses, ",
+  },
 ];

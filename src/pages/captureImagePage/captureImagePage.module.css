@@ -57,10 +57,10 @@
       gap: 2vw;
       button {
         color: #000;
-        border: 0.13vw solid #fff;
+        /* border: none; */
+        border: 1px solid #fff;
         text-align: center;
         width: 16vw;
-        border: none;
         outline: none;
         padding: 0.2vw 2vw;
         font-weight: 600;
@@ -80,7 +80,7 @@
       }
       .submit {
         color: #fff;
-        border: 0.1vw solid #fff;
+        /* border: 0.1vw solid #fff; */
         background-color: transparent;
       }
     }

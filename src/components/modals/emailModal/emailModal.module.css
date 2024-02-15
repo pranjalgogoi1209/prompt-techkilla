@@ -1,41 +1,48 @@
 .EmailModal {
+  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  /* background-color: white; */
-  position: absolute;
-  /* top: 0; */
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
+
   .container {
-    /* border: 2px solid black; */
+    /* border: 1px solid black; */
     background-color: #f1f1f1;
     margin: 5vw;
-    padding: 6vw;
+    padding: 5vw;
     display: flex;
     flex-direction: column;
-    gap: 5vw;
+    gap: 3vw;
+    border-radius: 1vw;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-size: 2.5vw;
+      /* color: red; */
+      cursor: pointer;
+    }
   }
+
   header {
     /* border: 1px solid black; */
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 2vw;
-    position: relative;
-    .close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 6vw;
-      color: #c72041;
-    }
-    .logo {
-      margin: 0 auto;
-      width: 20vw;
+    .logoContainer {
+      /* border: 1px solid black; */
+      width: 5vw;
+      height: 5vw;
       img {
         width: 100%;
         height: 100%;
@@ -51,36 +58,43 @@
   main {
     /* border: 1px solid black; */
     .form {
+      /* border: 1px solid black; */
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 5vw;
-      align-items: center;
+      gap: 1vw;
+      align-items: flex-start;
       input {
-        /* background-color: #c72041; */
-        width: 97%;
-        padding: 2vw;
-        font-size: 2vw;
-        font-weight: bold;
-      }
-      button {
-        /* width: 27%; */
-        text-align: center;
-        border: none;
-        background-color: transparent;
+        /* border: none; */
+        border: 1px solid #ffbe2e;
         outline: none;
-        padding: 1vw 4vw;
-        font-size: 3vw;
-        font-weight: 600;
-        border-radius: 1vw;
-        cursor: pointer;
-        box-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.5);
-        transform: translateY(-0.4vw);
-        transition: all ease 0.5s;
-        background-color: #c72041;
-        color: #f1f1f1;
+        width: 100%;
+        padding: 0.5vw 1vw;
+        font-size: 1.2vw;
+        font-weight: bold;
+        border-radius: 0.9vw;
+        transition: border ease 0.5s;
         &:hover {
-          box-shadow: none;
-          transform: translateY(0);
+          border: 1px solid #000;
+        }
+      }
+      .btn {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        padding: 0.3vw 1vw;
+        cursor: pointer;
+        /* border: none; */
+        border: 1px solid #fff;
+        outline: none;
+        background-color: #ffbe2e;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3vw;
+        border-radius: 0.6vw;
+        font-weight: bold;
+        transition: all ease 0.5s;
+        &:hover {
+          transform: translateX(0.5vw);
         }
       }
     }
