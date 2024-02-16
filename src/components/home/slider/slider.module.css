@@ -50,6 +50,40 @@
         margin-top: 0.3vw;
         font-size: 1.1vw;
         text-align: justify;
+        line-height: 1.3vw;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  .sliderContainer {
+    /* border: 1px solid white; */
+    .swiper {
+      width: 100%;
+    }
+    .swiperSlide {
+      /* gap: 1vw; */
+      /* border-radius: 1vw; */
+      padding: 0.3vw;
+      .imageContainer {
+        height: 25vw;
+        /* border-radius: 0.7vw; */
+        /* img {
+          border-radius: 0.7vw;
+        } */
+      }
+      .slideContent {
+        /* border: 1px solid black; */
+        /* padding: 0.2vw; */
+
+        h2 {
+          font-size: 2.7vw;
+        }
+        p {
+          font-size: 1.7vw;
+          line-height: 2.3vw;
+        }
       }
     }
   }

@@ -30,3 +30,36 @@
     }
   }
 }
+
+@media all and (max-width: 991px) {
+  .Header {
+    /* border: 1px solid white; */
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    .title {
+      /* border: 1px solid white; */
+      padding-left: 0vw;
+      h1 {
+        /* border: 1px solid white; */
+        font-size: 6vw;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    .logoContainer {
+      /* border: 1px solid white; */
+      width: 15vw;
+      height: 15vw;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      transition: all ease 0.5s;
+      &:hover {
+        transform: rotate(15deg);
+      }
+    }
+  }
+}

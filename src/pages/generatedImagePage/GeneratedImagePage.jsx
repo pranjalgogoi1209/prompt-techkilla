@@ -62,14 +62,14 @@ export default function GeneratedImagePage({ capturedImage }) {
 
   return (
     <div className={styles.GeneratedImagePage}>
-      <Header title={"Generate an Image From Text Prompt"} />
+      <Header title={"Generate An Image"} />
       <main className={styles.main}>
         <div className={styles.promptContainer}>
           {/* form */}
           <form className={styles.prompt} onSubmit={handleSubmit}>
             <div className={styles.inputBox}>
-              <input
-                type="text"
+              <textarea
+                // type="text"
                 name="prompt"
                 placeholder="Describe Your Vision"
                 value={prompt}
@@ -104,8 +104,8 @@ export default function GeneratedImagePage({ capturedImage }) {
                 relaxed and sophisticated demeanor
               </li>
               <li onClick={e => setPrompt(e.target.innerText)}>
-                Generate an image of a young couple, showcasing a natural and
-                joyful interaction between a male and female in a casual setting
+                A young couple, showcasing a natural and joyful interaction
+                between a male and female in a casual setting
               </li>
             </ol>
           </div>

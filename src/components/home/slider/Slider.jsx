@@ -11,7 +11,24 @@ export default function Slider() {
   return (
     <div className={styles.sliderContainer}>
       <Swiper
-        spaceBetween={90}
+        /* slidesPerView={4}
+        spaceBetween={90} */
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 90,
+            coverflowEffect: {
+              rotate: 40,
+            },
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 90,
+            coverflowEffect: {
+              rotate: 50,
+            },
+          },
+        }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         loop={true}
         autoplay={{
@@ -21,9 +38,8 @@ export default function Slider() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={4}
         coverflowEffect={{
-          rotate: 50,
+          // rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
@@ -35,7 +51,7 @@ export default function Slider() {
         {sliderData?.map((item, index) => (
           <SwiperSlide className={styles.swiperSlide} key={index}>
             <div className={styles.imageContainer}>
-              <img src={item.img} />
+              <img src={item.img} alt="silderImg" />
             </div>
             <div className={styles.slideContent}>
               <h2>Prompt</h2>

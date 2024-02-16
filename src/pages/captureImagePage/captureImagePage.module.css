@@ -86,3 +86,46 @@
     }
   }
 }
+
+@media all and (max-width: 991px) {
+  .CaptureImagePage {
+    /* border: 1px solid white; */
+    gap: 15vw;
+    .captureImage {
+      /* border: 1px solid white; */
+      gap: 5vw;
+      .webcamContainer {
+        position: relative;
+        width: 50vw;
+        height: 40.8vw;
+        border: 0.6vw solid #fff;
+        /* border-radius: 1vw; */
+      }
+
+      .capture {
+        /* border: 1px solid white; */
+        gap: 4vw;
+        button {
+          border: 2px solid #fff;
+          width: 22.5vw;
+          outline: none;
+          padding: 1vw 3vw;
+          font-size: 3.5vw;
+          border-radius: 0.6vw;
+          &:hover {
+            box-shadow: none;
+            transform: translateY(0);
+          }
+        }
+        .captureRetake {
+          background-color: #fcb017;
+        }
+        .submit {
+          color: #fff;
+          /* border: 0.1vw solid #fff; */
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
