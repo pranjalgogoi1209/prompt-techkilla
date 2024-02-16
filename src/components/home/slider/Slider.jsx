@@ -18,7 +18,7 @@ export default function Slider() {
         breakpoints={{
           576: {
             slidesPerView: 3,
-            spaceBetween: 90,
+            spaceBetween: 70,
             coverflowEffect: {
               rotate: 40,
             },
