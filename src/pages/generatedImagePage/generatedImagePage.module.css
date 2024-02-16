@@ -220,7 +220,6 @@
             position: relative;
             textarea {
               /* border: 1px solid red; */
-              padding: 1vw;
               font-size: 2.8vw;
               height: 7.5vw;
               width: 100%;
@@ -273,7 +272,7 @@
         border: 4px solid #ffbe2e;
         margin-top: 13vw;
         width: 35vw;
-        height: 46.5vw;
+        height: 47.5vw;
         .generatedImgContainer {
           width: 100%;
           height: 100%;

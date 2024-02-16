@@ -25,7 +25,7 @@ export default function Slider() {
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 90,
+            spaceBetween: 70,
             coverflowEffect: {
               rotate: 40,
             },
