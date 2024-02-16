@@ -100,3 +100,52 @@
     }
   }
 }
+
+@media all and (max-width: 991px) {
+  .EmailModal {
+    .container {
+      gap: 5vw;
+      padding: 10vw;
+      .close {
+        font-size: 4.5vw;
+      }
+    }
+    header {
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+      .logoContainer {
+        width: 8vw;
+        height: 8vw;
+      }
+      h1 {
+        /* border: 1px solid black; */
+        font-size: 4vw;
+      }
+    }
+    main {
+      /* border: 1px solid black; */
+      .form {
+        /* border: 1px solid black; */
+        width: 100%;
+        gap: 2vw;
+        input {
+          border: 1px solid #ffbe2e;
+          outline: none;
+          width: 100%;
+          padding: 1vw 2vw;
+          font-size: 2.2vw;
+          /* border-radius: 0.9vw; */
+        }
+        .btn {
+          padding: 0.5vw 2vw;
+          cursor: pointer;
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}

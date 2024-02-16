@@ -62,3 +62,42 @@
     }
   }
 }
+
+@media all and (max-width: 991px) {
+  .popupQr {
+    .qr {
+      padding: 10vw;
+      .close {
+        font-size: 4.5vw;
+      }
+
+      header {
+        /* border: 1px solid black; */
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        .logoContainer {
+          /* border: 1px solid black; */
+          width: 8vw;
+          height: 8vw;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        h1 {
+          border: 1px solid black;
+          font-size: 4vw;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+
+      .qrCode {
+        width: 25vw;
+        /* border: 1px solid black; */
+      }
+    }
+  }
+}
