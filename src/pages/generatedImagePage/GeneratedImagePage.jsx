@@ -103,10 +103,6 @@ export default function GeneratedImagePage({ capturedImage }) {
                 Craft a visually appealing image of a mature female with a
                 relaxed and sophisticated demeanor
               </li>
-              <li onClick={e => setPrompt(e.target.innerText)}>
-                A young couple, showcasing a natural and joyful interaction
-                between a male and female in a casual setting
-              </li>
             </ol>
           </div>
 

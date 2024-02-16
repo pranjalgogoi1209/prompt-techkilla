@@ -13,7 +13,16 @@ export default function Slider() {
       <Swiper
         /* slidesPerView={4}
         spaceBetween={90} */
+
+        // minwidth
         breakpoints={{
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 90,
+            coverflowEffect: {
+              rotate: 40,
+            },
+          },
           768: {
             slidesPerView: 3,
             spaceBetween: 90,
