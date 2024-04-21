@@ -45,7 +45,7 @@ export default function GeneratedImagePage({ capturedImage }) {
       showImgRef.current.style.display = "flex";
       setGeneratedImg("");
       axios
-        .post("https://49bb-103-17-110-127.ngrok-free.app/img2txt", {
+        .post("https://h.ngrok.dev/img2txt", {
           data: prompt,
           image: capturedImage.split(",")[1],
           // image: capturedImage,
