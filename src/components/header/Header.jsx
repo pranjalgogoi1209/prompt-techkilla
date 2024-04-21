@@ -11,7 +11,7 @@ export default function Header({ title }) {
       </div>
       <div className={styles.logoContainer}>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" style={{ opacity: 0 }} />
         </Link>
       </div>
     </header>
