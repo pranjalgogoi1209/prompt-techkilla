@@ -8,7 +8,7 @@ import Header from "../../components/header/Header";
 import EmailFeature from "../../components/generatedImage/emailFeature/EmailFeature";
 import DownloadFeature from "../../components/generatedImage/downloadFeature/DownloadFeature";
 import PrintFeature from "../../components/generatedImage/printFeature/PrintFeature";
-import QrFeature from "../../components/generatedImage/qrFeature/QrFeature";
+import Qr from "../../components/qr/Qr";
 import { MdModeEditOutline } from "react-icons/md";
 import { FaWandMagicSparkles } from "react-icons/fa6";
 
@@ -19,6 +19,9 @@ export default function GeneratedImagePage({ capturedImage }) {
   const [prompt, setPrompt] = useState("");
   const [generatedImg, setGeneratedImg] = useState();
   const [printImage, setPrintImage] = useState();
+  const [showQr, setShowQr] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+  const [url, setUrl] = useState();
 
   generatedImg && console.log("generated Image =>", generatedImg);
 
@@ -33,6 +36,24 @@ export default function GeneratedImagePage({ capturedImage }) {
     pauseOnHover: true,
     draggable: true,
     theme: "dark",
+  };
+
+  // image uploading on server
+  const getUrl = url => {
+    axios
+      .post(
+        "https://adp24companyday.com/aiphotobooth/aiphotobooth_godrej_ai_prompt/upload.php",
+        {
+          img: url,
+        }
+      )
+      .then(function (response) {
+        setUrl(response.data.url);
+        console.log("image uploaded on server");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const handleSubmit = e => {
@@ -53,6 +74,7 @@ export default function GeneratedImagePage({ capturedImage }) {
         .then(function (response) {
           console.log(response);
           setGeneratedImg(`data:image/webp;base64,${response.data.result}`);
+          getUrl(response.data.result);
         })
         .catch(function (error) {
           console.log(error);
@@ -121,8 +143,10 @@ export default function GeneratedImagePage({ capturedImage }) {
               generatedImg={generatedImg}
             />
 
+            <button onClick={() => setShowQr(true)}>qr</button>
+
             {/* qr feature */}
-            <QrFeature generatedImg={generatedImg} />
+            {showQr && <Qr url={url} setShowQr={setShowQr} />}
           </div>
         </div>
         <div className={styles.resultContainer}>
