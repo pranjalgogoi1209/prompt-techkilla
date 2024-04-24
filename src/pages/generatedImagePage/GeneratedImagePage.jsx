@@ -152,7 +152,7 @@ export default function GeneratedImagePage({ capturedImage }) {
               Qr
             </button>
 
-            <button>
+            <button className={styles.qr}>
               <Link to={"/"} style={{ color: "black", textDecoration: "none" }}>
                 Home{" "}
               </Link>
