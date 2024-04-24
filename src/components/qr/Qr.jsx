@@ -3,7 +3,7 @@ import styles from "./qr.module.css";
 
 import QRCode from "react-qr-code";
 
-// import close from "./../../assets/close.svg";
+import { IoMdCloseCircle } from "react-icons/io";
 
 export default function Qr({ url, setShowQr }) {
   // console.log("url =>", url);
@@ -19,12 +19,11 @@ export default function Qr({ url, setShowQr }) {
 
         {!url && <p className={styles.loader}>Loading...</p>}
 
-        {url && <QRCode size={150} value={url} className={styles.qrCode} />}
+        {url && <QRCode size={180} value={url} className={styles.qrCode} />}
 
         {/* close */}
         <div className={styles.close} onClick={() => setShowQr(false)}>
-          {/* <img src={close} alt="close" /> */}
-          close
+          <IoMdCloseCircle />
         </div>
       </div>
     </div>

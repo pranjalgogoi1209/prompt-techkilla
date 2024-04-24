@@ -5,9 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import styles from "./generatedImagePage.module.css";
 import Header from "../../components/header/Header";
-import EmailFeature from "../../components/generatedImage/emailFeature/EmailFeature";
 import DownloadFeature from "../../components/generatedImage/downloadFeature/DownloadFeature";
 import PrintFeature from "../../components/generatedImage/printFeature/PrintFeature";
+import { Link } from "react-router-dom";
+
+import Email from "../../components/email/Email";
 import Qr from "../../components/qr/Qr";
 import { MdModeEditOutline } from "react-icons/md";
 import { FaWandMagicSparkles } from "react-icons/fa6";
@@ -133,9 +135,6 @@ export default function GeneratedImagePage({ capturedImage }) {
             {/* download feature */}
             <DownloadFeature exportRef={exportRef} />
 
-            {/* email feature */}
-            <EmailFeature generatedImg={generatedImg} />
-
             {/* print feature */}
             <PrintFeature
               setPrintImage={setPrintImage}
@@ -143,10 +142,29 @@ export default function GeneratedImagePage({ capturedImage }) {
               generatedImg={generatedImg}
             />
 
-            <button onClick={() => setShowQr(true)}>qr</button>
+            {/* email feature */}
+            <button className={styles.qr} onClick={() => setShowEmail(true)}>
+              Email
+            </button>
+
+            {/* qr feature */}
+            <button className={styles.qr} onClick={() => setShowQr(true)}>
+              Qr
+            </button>
+
+            <button>
+              <Link to={"/"} style={{ color: "black", textDecoration: "none" }}>
+                Home{" "}
+              </Link>
+            </button>
 
             {/* qr feature */}
             {showQr && <Qr url={url} setShowQr={setShowQr} />}
+
+            {/* email feature */}
+            {showEmail && (
+              <Email setShowEmail={setShowEmail} url={url} prompt={prompt} />
+            )}
           </div>
         </div>
         <div className={styles.resultContainer}>

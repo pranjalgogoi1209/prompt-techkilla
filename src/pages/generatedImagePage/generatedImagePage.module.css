@@ -59,7 +59,6 @@
           outline: none;
           background-color: #ffbe2e;
           display: flex;
-          justify-content: space-between;
           align-items: center;
           font-size: 1.5vw;
           border-radius: 0.6vw;
@@ -118,15 +117,21 @@
           outline: none;
           background-color: #ffbe2e;
           display: flex;
-          justify-content: space-between;
+          justify-content: between;
           align-items: center;
           font-size: 1.2vw;
           border-radius: 0.6vw;
           font-weight: bold;
           transition: all ease 0.5s;
+          text-align: center;
           &:hover {
             transform: translateY(0.2vw);
           }
+        }
+        .qr {
+          text-align: center !important;
+          display: flex;
+          justify-content: center;
         }
       }
     }
