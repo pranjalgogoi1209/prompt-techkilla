@@ -1,19 +1,20 @@
-import sliderImg1 from "./sliderImage1.png";
-import sliderImg2 from "./sliderImage2.png";
-import sliderImg3 from "./sliderImage3.png";
-import sliderImg4 from "./sliderImage4.png";
-import sliderImg5 from "./sliderImage3.png";
-import sliderImg6 from "./sliderImage2.png";
-import sliderImg7 from "./sliderImage1.png";
-import sliderImg8 from "./sliderImage4.png";
-
+import sliderImg01 from "./sliderImg01.jpg";
+import sliderImg02 from "./sliderImg02.jpg";
+import sliderImg03 from "./sliderImg03.jpg";
+import sliderImg04 from "./sliderImg04.jpg";
+import sliderImg05 from "./sliderImg05.png";
+import sliderImg06 from "./sliderImg06.png";
+import sliderImg07 from "./sliderImg07.png";
+import sliderImg08 from "./sliderImg08.png";
+import sliderImg09 from "./sliderImg09.png";
 export {
-  sliderImg1,
-  sliderImg2,
-  sliderImg3,
-  sliderImg4,
-  sliderImg5,
-  sliderImg6,
-  sliderImg7,
-  sliderImg8,
+  sliderImg01,
+  sliderImg02,
+  sliderImg03,
+  sliderImg04,
+  sliderImg05,
+  sliderImg06,
+  sliderImg07,
+  sliderImg08,
+  sliderImg09,
 };

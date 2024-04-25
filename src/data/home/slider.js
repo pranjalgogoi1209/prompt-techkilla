@@ -1,43 +1,47 @@
 import {
-  sliderImg1,
-  sliderImg2,
-  sliderImg3,
-  sliderImg4,
-  sliderImg5,
-  sliderImg6,
+  sliderImg01,
+  sliderImg02,
+  sliderImg03,
+  sliderImg04,
+  sliderImg05,
+  sliderImg06,
+  sliderImg07,
+  sliderImg08,
+  sliderImg09,
 } from "./../../assets/homePage/slider";
 
 export const sliderData = [
   {
-    img: sliderImg1,
-    prompt: "A professional adult female with a casual appearance",
+    img: sliderImg01,
+    prompt: "Couple in paris romantic sunset",
   },
   {
-    img: sliderImg2,
-    prompt: "A man with cowboy hat sitting on a horse",
+    img: sliderImg02,
+    prompt: "Indian women in dubaicity",
   },
   {
-    img: sliderImg3,
-    prompt: "A man pondering his next move on the chessboard",
+    img: sliderImg03,
+    prompt: "Indian boy with Butterfly on his shirt",
+  },
+
+  {
+    img: sliderImg04,
+    prompt: "Young Indian girl in temple smiling",
   },
   {
-    img: sliderImg4,
-    prompt: "A man working behind a big screen, wearing ",
+    img: sliderImg05,
+    prompt: "A girl with a professional look",
   },
   {
-    img: sliderImg5,
-    prompt: "A man working behind a big screen, wearing glasses",
+    img: sliderImg06,
+    prompt: "A man is pondering his next move on the chessboard",
   },
   {
-    img: sliderImg6,
-    prompt: "A man working behind a big screen, wearing glasses, ",
+    img: sliderImg07,
+    prompt: "A man is riding a horse",
   },
   {
-    img: sliderImg6,
-    prompt: "A man working behind a big screen, wearing glasses, ",
-  },
-  {
-    img: sliderImg6,
-    prompt: "A man working behind a big screen, wearing glasses, ",
+    img: sliderImg09,
+    prompt: "A girl is sitting in a train",
   },
 ];
